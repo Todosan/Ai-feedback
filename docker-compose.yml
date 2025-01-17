@@ -5,7 +5,7 @@ services:
     build:
       context: ./insurance-recommendation  # Path to the frontend Dockerfile
     ports:
-      - "80:80"  # Map frontend container port to host (port 80 is the default for Nginx)
+      - "80:80"  # Map frontend container port to host
     environment:
       REACT_APP_API_URL: "http://backend:5000"  # Communicate with the backend via service name
     depends_on:
